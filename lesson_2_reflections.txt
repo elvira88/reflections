@@ -1,2 +1,5 @@
 1- ¿Qué sucede cuando inicializas un repositorio? ¿Por qué necesitas hacerlo?
 Se crea el directorio .git. Es necesario hacerlo para poder ver los commits posteriormente.
+
+2- ¿En qué se diferencia el área de ensayo del directorio de trabajo y del repositorio? ¿Qué valor crees que ofrece?
+El área de enayo es previo al repositorio, por si vas a hacer algo mal tienes tiempo de darte cuenta antes de subirlo al repositorio. Ofrece como una "red de seguridad".

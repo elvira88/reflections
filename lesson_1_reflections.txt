@@ -1,0 +1,83 @@
+1- ¿De qué manera ver una diferencia entre dos versiones de un archivo te ayuda a ver el error que se introdujo?
+        De una manera muy sencilla y muy fácil.
+        En Windows nos situamos en la carpeta que contiene los archivos a comparar (cd ..) y ahí ponemos
+        FC nombreArchivo1 nombreArchivo2
+        y saldrán las diferencias entre archivos (si no tenemos Git, por supuesto).
+
+
+2- ¿Cómo podría tener un acceso fácil a todo el historial de un archivo que lo haga un programador más eficiente a largo plazo?
+
+        Con Git.
+        
+        
+3- ¿Cuáles cree que son los pros y los contras de elegir manualmente cuándo crear una confirmación, como lo hace en Git, frente a tener las versiones guardadas automáticamente, como lo hace Google Docs?
+    PROS: Te aseguras de tener una versión funcional al guardarlo tú y eliges exactamente cuándo guardarlo.
+    CONTRAS: Se te puede olvidar hacer el commit y no guardarlo.
+
+
+4- ¿Por qué crees que algunos sistemas de control de versiones, como Git, permiten guardar múltiples archivos en una confirmación, mientras que otros, como Google Docs, tratan cada archivo por separado?
+        Porque es muy probable que una app web use más de un archivo y estén relacionados, mientras que Google Docs usa archivos de texto en los que no existen dependencias unos de otros.
+        
+5- ¿Cómo se pueden usar los comandos git log y git diff para ver el historial de archivos? 
+    Con git log ves todo el historial de commits, con el Id del commit, el autor, la fecha y el mensaje asociado.
+    Con git diff comparas el código que ha variado de un commit al siguiente. Importante poner el Id más antiguo primero y después el más reciente.
+    
+6- ¿De qué manera el uso del control de versiones te hace más seguro para realizar cambios que podrían romper algo?
+    Puedes ver exactamente en qué momento se rompió y cómo.
+    
+7- Ahora que tiene configurado su espacio de trabajo, ¿qué quiere probar con Git?
+    Añadir modificaciones de archivos
+        
+
+RECORDATORIO:
+    - cd rutaParaIr
+    - mkdir nombreCarpeta /// para crear nueva carpeta
+    - brackets /// en la ruta que queremos que se abra brackets, por ejemplo 
+            C:\Users\Fernando\Desktop\Elvira\version-control\reflections>brackets
+
+Para ver las diferencias entre dos commit:
+        git diff Id1 Id2  /// Primero pones el Id del que esté más abajo (en consola) y luego del de arriba.
+        Tb puedes poner git diff -u NombreArchivo1 NombreArchivo2
+        
+Para ver todo lo que ha pasado en el repositorio (commits):
+        git log 
+        Para detener la salida (git log): presione q. // si no, no puedes escribir
+        
+Para ver la versión de git instalada:
+        git --version
+        
+Para clonar un repositorio:
+        git clone URL
+
+Para volver a un commit antiguo
+        git checkout IdDelCommit
+
+Para mover un archivo en git
+        mv ruta/NombreArchivo nombreAGuardarComo
+
+Si quisieras que se configure un editor de texto específico (x ejemplo Sublime)
+    git config --global core.editor "'C: / Archivos de programa / Sublime Text 2 / sublime_text.exe' -n -w"
+
+Para obtener salida coloreada:
+        git config --global color.ui auto
+        
+Es posible copiar un directorio de una computadora a otra usando el comando scp, que significa "copia segura".
+
+Para ver todos los archivos de una carpeta, en git ponemos:
+    ls
+    Si además queremos ver los archivos ocultos ponemos: 
+        ls -a
+Para crear un nuevo repositorio, en la carpeta donde queremos crearlo:
+    git init
+
+Para ver los archivos que han cambiado desde el último commit:
+    git status
+    
+Para añadir archivos:
+    git add nombreArchivo
+    
+Si te equivocas añadiendo un archivo puedes hacer:
+    git reset nombreArchivo
+
+Para hacer los commits:
+    git commit -m "mensaje de commit"
