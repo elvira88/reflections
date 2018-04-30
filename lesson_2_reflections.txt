@@ -1,0 +1,2 @@
+1- ¿Qué sucede cuando inicializas un repositorio? ¿Por qué necesitas hacerlo?
+Se crea el directorio .git. Es necesario hacerlo para poder ver los commits posteriormente.
