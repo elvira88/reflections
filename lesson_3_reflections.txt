@@ -1,0 +1,4 @@
+¿Cuándo desea utilizar un repositorio remoto en lugar de mantener todo su trabajo local?
+
+    Pues por ejemplo, si no estás usando el ordenador que sueles usar para hacer código, si estás colaborando con otra persona, 
+    o si incluso sólo quieres curiosear el código de alguien.
