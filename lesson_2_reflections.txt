@@ -1,5 +1,20 @@
 1- ¿Qué sucede cuando inicializas un repositorio? ¿Por qué necesitas hacerlo?
-Se crea el directorio .git. Es necesario hacerlo para poder ver los commits posteriormente.
+    Se crea el directorio .git. Es necesario hacerlo para poder ver los commits posteriormente.
 
 2- ¿En qué se diferencia el área de ensayo del directorio de trabajo y del repositorio? ¿Qué valor crees que ofrece?
-El área de enayo es previo al repositorio, por si vas a hacer algo mal tienes tiempo de darte cuenta antes de subirlo al repositorio. Ofrece como una "red de seguridad".
+    El área de enayo es previo al repositorio, por si vas a hacer algo mal tienes tiempo de darte cuenta antes de subirlo al repositorio. Ofrece como una "red de seguridad".
+
+3- ¿Cómo puede usar el área de preparación para asegurarse de tener un compromiso por cambio lógico?
+    Viendo lo que ha cambiado en cada archivo usando git diff.
+
+4- ¿Cuáles son algunas situaciones en las que las ramas serían útiles para mantener organizada tu historia? ¿Cómo ayudarían las ramas?
+    Si quieres hacer experimentos con tu código u otras versiones. Las ramas ayudan a mantener tu app limpia de otras cosas que puede que al final no uses, por ejemplo o para no ensuciar tu código.
+
+5- ¿Cómo te ayudan los diagramas a visualizar la estructura de la rama?
+    Para ver qué se ha hecho antes o después y ver cómo podemos acceder a determinados commits. También para saber cuándo na rama concreta fue hecha.
+
+6- ¿Cuál es el resultado de fusionar dos ramas juntas? ¿Por qué lo representamos en el diagrama de la manera en que lo hacemos?
+    Que en vez de ser dos ramas se convierten en una sola. Porque puede trabajarse en ambas ramas a la vez y cuando se esté contento con el resultado se puede unir en uno sólo.
+
+7- ¿Cuáles son los pros y los contras de la fusión automática de Git vs. siempre fusionarse manualmente?
+    Si no hay conficto lo hará automáticamente y nos ahorraremos mucho tiempo. Si hay conflicto podremos ver qué conflicto es y modificarlo antes de hacer el merge.

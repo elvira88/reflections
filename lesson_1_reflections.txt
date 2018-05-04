@@ -48,6 +48,8 @@ Para ver la versión de git instalada:
         
 Para clonar un repositorio:
         git clone URL
+        Si queremos que sólo se copie el contenido (xq ya hemos creado una carpeta con ese nombre) ponemos:
+        git clone URL .   /// después de la url, espacio y punto
 
 Para volver a un commit antiguo
         git checkout IdDelCommit
@@ -74,10 +76,69 @@ Para ver los archivos que han cambiado desde el último commit:
     git status
     
 Para añadir archivos:
-    git add nombreArchivo
+    git add nombreArchivo   //// Si tienes mil archivos para subir, para hacerlo todo de una vez pones 
+                                    git add .
     
 Si te equivocas añadiendo un archivo puedes hacer:
     git reset nombreArchivo
 
 Para hacer los commits:
-    git commit -m "mensaje de commit"
+    git commit -m "mensaje de commit"  ////// -m es la flag para message
+    Si sólo pones:
+        git commit //// Se abre un editor de texto para que escribas el sms
+
+Para comparar archivos del staging area y del working directory ponemos sólo:
+    git diff
+    Si comparamos un archivo del staging area con uno del repositorio:
+        git diff --staged
+
+Si quiero descartar cambios del staging area y del working directory ponemos:
+    git reset --hard   --> cuidado con este, no podremos resuperar esos cambios
+    
+Si pones:
+    git branch //// te indica en qué rama estás, suele ser la master o *master (el * significa que es la que estás comprobando). También te dice qué ramas hay localmente (en el pc)
+    git branch nombreDeLaRama //// crea una rama con ese nombre
+    Para cambiar de una rama a otra:
+        git checkout nombreDeLaRama
+        Ejecutamos git branch //// y el asterisco habrá cambiado a delante de nombreDeLaRama
+    Si quieres saber cuántas ramas existen en ese repositorio (aunque no las tengas en tu pc):
+        git branch -r   /// -r es la flag de remota
+
+Para ver cómo es gráficamente la rama master y otra ponemos:
+    git log --graph --oneline master nombreOtraRama
+
+Si quieres hacer un cambio en un commit y guardarlo como una rama nueva y moverte ya a esa rama:
+
+    git checkout -b nombreDeLaRama
+    
+Si se elimina una rama y deja algunas asignaciones fuera de las ramas existentes, los commits seguirán siendo accesibles mediante su Id, hasta que se ejecute la recolección de basura de Git, que se hace:
+    git gc  ///// garbage collection
+    
+Para hacer un merge de dos ramas:
+    git merge nombreRama1 nombreRama2
+        Lo ideal es que estés en la rama que no tiene los cambbios últimos para fusionar, q suele ser la master y le mergeas otra rama con una funcionalidad nueva.
+    
+Para ver la diferencia entre un commit y su padre, sin saber quién era su padre (merge):
+    git show IdDelCommit
+    
+Para borrar la rama (pero manteniendo los commits que se han hecho en ella):
+    git branch -d nombreDeLaRama //// d es de delete
+    
+Si hay problemas para hacer el merge
+    git merge --abort
+
+Si no tienes una rama en local, la creas con el mismo nombre en tu pc y luego pones
+    git branch -u origin/nombreDeLaRama nombreDeLaRama //// y esto significa que cuando te refieres a esa rama te refieres a la rama esa de remoto
+    
+Si han hecho muchos cambios en el repo y no los tengo, podría hacer:
+    git pull origin nombreDeLaRama
+    
+Para saber los repositorios que hay en remoto (GitHub) ponemos:
+    git remote
+    
+    
+Ctrl 0
+
+
+
+vídeo Elías git 1h:10 para hacer una rama en local y subirla a la nube pero sin contenido
