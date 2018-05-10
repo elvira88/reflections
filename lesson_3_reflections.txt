@@ -1,4 +1,21 @@
-¿Cuándo desea utilizar un repositorio remoto en lugar de mantener todo su trabajo local?
+1- ¿Cuándo desea utilizar un repositorio remoto en lugar de mantener todo su trabajo local?
+    Pues por ejemplo, si no estás usando el ordenador que sueles usar para hacer código, si estás colaborando con otra persona, o si incluso sólo quieres curiosear el código de alguien.
+    
+2- ¿Por qué podría querer siempre hacer cambios manualmente en lugar de tener a Git actualizado automáticamente con su repositorio remoto?
+    Porque estás probando nuevas funcionalidades o porque puedes cagarla y es mejor cagarla en local que en el repositorio.
+    
+3- Describe las diferencias entre forks, clones y branches. ¿Cuándo usarías uno en lugar de otro?
+    Forks--> Cuando quiero clonar un repositorio que no me pertenece y poder hacer cambios en él. Desde GitHub
+    se hace muy fácilmente. Además, puede que no necesites descargarlo en local. El fork sirve también para que el dueño sepa que nos gusta su repositorio y que deseamos hacer algún cambio en él.
+    Clone--> Cuando no tienes tu repositorio en local y lo necesitas para modificarlo en tu pc. Es mejor hacerlo cuando tú eres el dueño del repositorio.
+    Branch--> Cuando quieres probar cosas nuevas que no estás seguro de si llegarán a buen puerto o no, para no cargarte el código anterior. Para añadir nuevas funcionalidades.
 
-    Pues por ejemplo, si no estás usando el ordenador que sueles usar para hacer código, si estás colaborando con otra persona, 
-    o si incluso sólo quieres curiosear el código de alguien.
+4- ¿Cuál es el beneficio de tener una copia del último estado conocido del control remoto almacenado localmente?
+    Que te olvidas de que haya conflictos y tener que hacer merges que puede que tengas que revisar. Lo ideal es hacer git pull antes de comenzar a trabajar. Si justo alguien hace un git push cuando estás trabajando, ya justo será mala suerte.
+
+5- ¿Cómo colaborarías sin usar Git o GitHub? ¿Qué sería más fácil y qué sería más difícil?
+    Sería mas fácil ya que nadie tocaría tu código pero para el trabajo colaborativo Git y GitHub son súper necesarios. Puedes supervisar, comentar y/o corregir el trabjo de tus compañeros y echaros una mano de vez en cuando, y si alguien quiere probar nuevas funcionalidades no tiene más que crear una rama. Además esta rama es visible para los compañeros que quieran ayudar/curiosear.
+
+6- ¿Cuándo le gustaría hacer cambios en una rama separada en lugar de directamente en el maestro? ¿Qué beneficios tiene cada enfoque?
+    Cuando esperas colaboración con otros compañeros es mejor hacerlo en ramas separadas porque puede que tú creas que es una buena idea/funcionalidad pero tus compañeros no.
+    Si estás trabajando tú solo en el proyecto y sólo quieres que la gente vea tu código puedes trabajar en master siempre y si cometes algún erros siempre puedes volver a determinado commit con git log y seguir desde ahí. Pero si es trabajo colaborativo, es mejor crear ramas.

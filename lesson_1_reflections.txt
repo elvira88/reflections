@@ -85,7 +85,7 @@ Si te equivocas añadiendo un archivo puedes hacer:
 Para hacer los commits:
     git commit -m "mensaje de commit"  ////// -m es la flag para message
     Si sólo pones:
-        git commit //// Se abre un editor de texto para que escribas el sms
+        git commit //// Se abre un editor de texto para que escribas el mensaje
 
 Para comparar archivos del staging area y del working directory ponemos sólo:
     git diff
@@ -116,7 +116,7 @@ Si se elimina una rama y deja algunas asignaciones fuera de las ramas existentes
     
 Para hacer un merge de dos ramas:
     git merge nombreRama1 nombreRama2
-        Lo ideal es que estés en la rama que no tiene los cambbios últimos para fusionar, q suele ser la master y le mergeas otra rama con una funcionalidad nueva.
+        Lo ideal es que estés en la rama que no tiene los cambios últimos para fusionar, q suele ser la master y le mergeas otra rama con una funcionalidad nueva.
     
 Para ver la diferencia entre un commit y su padre, sin saber quién era su padre (merge):
     git show IdDelCommit
@@ -134,11 +134,28 @@ Si han hecho muchos cambios en el repo y no los tengo, podría hacer:
     git pull origin nombreDeLaRama
     
 Para saber los repositorios que hay en remoto (GitHub) ponemos:
-    git remote
+    git remote  /// hasta que no ejecutemos el paso siguiente no devolverá nada
     
+Para añadir un repositorio a GIT ponemos:
+    git remote add origin URLdelRepositorio
     
-Ctrl 0
+Para comprobar que la URL se ha puesto bien ponemos:
+    git remote -v   /// -v es de verboose
+    
+Para enviar los cambios al remoto:
+    git push repoDondeQuieroMandarLosCambios nombreDeLaRama //// ejemplo git push origin master   o   git push origin nombreDeLaRama
+    
+Para traer los cambios del remoto
+    git pull repoDeDondeQuieroTraerLosCambios nombreDeLaRama //// ejemplo git pull origin master
+    
+Podemos crear un archivo directamente en GitHub estando en el propio repositorio y clickando en "Create new file"
 
+Fork sólo existe en GitHub, es como clonar un repo de alguien en tu cuenta directamente. Si quieres que alguien más pueda editar el código, en Settings >> Collaborators >> Add collaborator
 
-
-vídeo Elías git 1h:10 para hacer una rama en local y subirla a la nube pero sin contenido
+Si has hecho cambios en local y cambios en GitHub, puede haber conflicto. Para ello hacemos:
+    git fetch /// y se crea como una rama de lo que está en remoto y con git log y git diff podemos ver exactamente qué se ha cambiado para que no haya cagadas. Si estás de acuerdo con los cambios, harás git merge master origin/master y ya luego git add y git commit y git push
+    Para comprobar, despues de
+        git fetch //// git status
+        
+En GitHub puedes clickar en "New pull request" para indicar a los colaboradores que te gustaría hacer un merge. Ellos lo ven y pueden comentarlo por si hay posibles errores o no quieren que pase y si todo va bien se clicka en "Merge pull request"
+        
