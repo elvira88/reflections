@@ -85,7 +85,7 @@ Si te equivocas añadiendo un archivo puedes hacer:
 Para hacer los commits:
     git commit -m "mensaje de commit"  ////// -m es la flag para message
     Si sólo pones:
-        git commit //// Se abre un editor de texto para que escribas el mensaje
+        git commit //// Se abre un editor de texto para que escribas el mensaje, lo escribes y das Ctrl+X para salir y Y
 
 Para comparar archivos del staging area y del working directory ponemos sólo:
     git diff
@@ -158,4 +158,9 @@ Si has hecho cambios en local y cambios en GitHub, puede haber conflicto. Para e
         git fetch //// git status
         
 En GitHub puedes clickar en "New pull request" para indicar a los colaboradores que te gustaría hacer un merge. Ellos lo ven y pueden comentarlo por si hay posibles errores o no quieren que pase y si todo va bien se clicka en "Merge pull request"
-        
+
+
+Para añadir el repositorio original como un remoto a mi repo clonado ejecuto:
+    git remote add upstream(suele llamarse así pero puedo llamarlo como quiera) URLDelRepoOriginal
+A continuación vas a master y si justo alguien ha hecho cambios de un master que tú has forkeado y vas a hacer tus cambios y hay conflicto, ejecutas:
+        git pull upstream master
